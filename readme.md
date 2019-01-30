@@ -39,3 +39,13 @@ Tested on mobile, desktop and web.
 
 This free template is part of a family of responsive email templates for developers and startups available on [HTML Email](https://htmlemail.io).
 [![image](https://user-images.githubusercontent.com/15963/49354042-c0bcb800-f675-11e8-92ef-7e9987b85bf6.png)](https://htmlemail.io)
+
+## ThriveHive Notes
+
+Modified from simple to card based layout.
+
+Install Juice:
+`npm install juice -g`
+
+Run juice on HTML to inline styles:
+`juice email.html email-inlined.html`

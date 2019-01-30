@@ -54,9 +54,7 @@
         display: block;
         margin: 0 auto !important;
         /* makes it centered */
-        max-width: 580px;
-        padding: 10px;
-        width: 580px; 
+        width: 100%;
       }
 
       /* This should also be a block element, so that it will fill 100% of the .container */
@@ -64,17 +62,30 @@
         box-sizing: border-box;
         display: block;
         margin: 0 auto;
-        max-width: 580px;
-        padding: 10px; 
+        max-width: 100%;
       }
 
       /* -------------------------------------
           HEADER, FOOTER, MAIN
       ------------------------------------- */
-      .main {
+      .header {
         background: #ffffff;
-        border-radius: 3px;
-        width: 100%; 
+        width: 100%;
+        box-shadow: 0 10px 5px -5px lightgray;
+        margin-bottom: 50px;
+      }
+
+      .card {
+        background: #ffffff;
+        width: 95%;
+        margin: 0 auto 20px auto;
+        border-radius: 4px;
+        text-align: center;
+        box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+
+      }
+      .card p {
+        width: 75%;
       }
 
       .wrapper {
@@ -93,13 +104,22 @@
         text-align: center;
         width: 100%; 
       }
-        .footer td,
-        .footer p,
-        .footer span,
-        .footer a {
-          color: #999999;
-          font-size: 12px;
-          text-align: center; 
+      .footer td,
+      .footer p,
+      .footer span,
+      .footer a {
+        font-size: 12px;
+        text-align: center;
+      }
+      .footer img {
+        max-width: 200px;
+      }
+      .footer .link {
+        display: inline;
+        margin: 0 10px;
+      }
+      .footer .link:first-child {
+          border-right: black;
       }
 
       /* -------------------------------------
@@ -113,8 +133,7 @@
         font-family: sans-serif;
         font-weight: 400;
         line-height: 1.4;
-        margin: 0;
-        margin-bottom: 30px; 
+        margin: 0 0 15px 0;
       }
 
       h1 {
@@ -130,19 +149,18 @@
         font-family: sans-serif;
         font-size: 14px;
         font-weight: normal;
-        margin: 0;
-        margin-bottom: 15px; 
+        margin: 0 0 15px 0;
       }
-        p li,
-        ul li,
-        ol li {
-          list-style-position: inside;
-          margin-left: 5px; 
+      p li,
+      ul li,
+      ol li {
+        list-style-position: inside;
+        margin-left: 5px;
       }
 
       a {
-        color: #3498db;
-        text-decoration: underline; 
+        color: #5fb58a;
+        text-decoration: none;
       }
 
       /* -------------------------------------
@@ -150,40 +168,42 @@
       ------------------------------------- */
       .btn {
         box-sizing: border-box;
-        width: 100%; }
-        .btn > tbody > tr > td {
-          padding-bottom: 15px; }
-        .btn table {
-          width: auto; 
+        width: 100%;
       }
-        .btn table td {
-          background-color: #ffffff;
-          border-radius: 5px;
-          text-align: center; 
+      .btn > tbody > tr > td {
+        padding: 15px 0;
       }
-        .btn a {
-          background-color: #ffffff;
-          border: solid 1px #3498db;
-          border-radius: 5px;
-          box-sizing: border-box;
-          color: #3498db;
-          cursor: pointer;
-          display: inline-block;
-          font-size: 14px;
-          font-weight: bold;
-          margin: 0;
-          padding: 12px 25px;
-          text-decoration: none;
-          text-transform: capitalize; 
+      .btn table {
+        width: auto;
+      }
+      .btn table td {
+        background-color: #ffffff;
+        border-radius: 50px;
+        text-align: center;
+      }
+      .btn a {
+        background-color: #ffffff;
+        border: solid 1px #5fb58a;
+        border-radius: 50px;
+        box-sizing: border-box;
+        color: #5fb58a;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+        padding: 12px 55px;
+        text-decoration: none;
+        text-transform: capitalize;
       }
 
       .btn-primary table td {
-        background-color: #3498db; 
+        background-color: #5fb58a;
       }
 
       .btn-primary a {
-        background-color: #3498db;
-        border-color: #3498db;
+        background-color: #5fb58a;
+        border-color: #5fb58a;
         color: #ffffff; 
       }
 
@@ -242,7 +262,7 @@
       hr {
         border: 0;
         border-bottom: 1px solid #f6f6f6;
-        margin: 20px 0; 
+        margin: 20px 0;
       }
 
       /* -------------------------------------
@@ -251,19 +271,21 @@
       @media only screen and (max-width: 620px) {
         table[class=body] h1 {
           font-size: 28px !important;
-          margin-bottom: 10px !important; 
+          margin-bottom: 10px !important;
         }
+
         table[class=body] p,
         table[class=body] ul,
         table[class=body] ol,
         table[class=body] td,
         table[class=body] span,
         table[class=body] a {
-          font-size: 16px !important; 
+          font-size: 16px !important;
         }
+
         table[class=body] .wrapper,
         table[class=body] .article {
-          padding: 10px !important; 
+          padding: 10px !important;
         }
         table[class=body] .content {
           padding: 0 !important; 
@@ -272,7 +294,7 @@
           padding: 0 !important;
           width: 100% !important; 
         }
-        table[class=body] .main {
+        table[class=body] .card {
           border-left-width: 0 !important;
           border-radius: 0 !important;
           border-right-width: 0 !important; 
@@ -287,6 +309,9 @@
           height: auto !important;
           max-width: 100% !important;
           width: auto !important; 
+        }
+        .footer .link {
+          display: block;
         }
       }
 
@@ -327,70 +352,169 @@
   <body class="">
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
       <tr>
-        <td>&nbsp;</td>
         <td class="container">
           <div class="content">
+            <div class="header">
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="wrapper">Marketing Guide</td>
+                  <td class="wrapper" align="right"><a href="mailto:support@thrivehive.com">Contact Us</a></td>
+                </tr>
+              </table>
+            </div>
 
-            <!-- START CENTERED WHITE CONTAINER -->
+
             <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
-            <table role="presentation" class="main">
 
-              <!-- START MAIN CONTENT AREA -->
+            <!-- Card One -->
+            <table role="presentation" class="card">
               <tr>
                 <td class="wrapper">
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                     <tr>
-                      <td>
-                        <p>Hi there,</p>
-                        <p>Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
-                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
-                          <tbody>
-                            <tr>
-                              <td align="left">
-                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                  <tbody>
-                                    <tr>
-                                      <td> <a href="http://htmlemail.io" target="_blank">Call To Action</a> </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <p>This is a really simple email template. Its sole purpose is to get the recipient to click the button with no distractions.</p>
-                        <p>Good luck! Hope it works.</p>
+                      <td align="center">
+                        <h2>Hi Anna,</h2>
+                        <p>We've got some ideas on how to improve your Google profile.</p>
                       </td>
                     </tr>
                   </table>
                 </td>
               </tr>
-
-            <!-- END MAIN CONTENT AREA -->
             </table>
+            <!-- End Card One -->
+
+            <!-- Card Two -->
+            <table role="presentation" class="card">
+              <tr>
+                <td class="wrapper">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="center">
+                        <h1>Posting Ideas</h1>
+                        <p>Copy our examples, tweak them for your business and download free images</p>
+                        <img src="https://www.perchapp.com//content/1-learn/38-promote-your-gift-certificates-on-your-social-pages/home.png"/>
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+                          <tbody>
+                          <tr>
+                            <td align="center">
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                <tr>
+                                  <td>
+                                    <a href="http://htmlemail.io" target="_blank">SEE POST IDEAS</a>
+                                  </td>
+                                </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- End Card Two -->
+
+            <!-- Card Three -->
+            <table role="presentation" class="card">
+              <tr>
+                <td class="wrapper">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="center">
+                        <h1>Profile Ideas</h1>
+                        <p>Keep your presence updated and remember to respond to reviews.</p>
+                        <img src="https://www.perchapp.com//content/1-learn/38-promote-your-gift-certificates-on-your-social-pages/home.png"/>
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+                          <tbody>
+                          <tr>
+                            <td align="center">
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                <tr>
+                                  <td>
+                                    <a href="http://htmlemail.io" target="_blank">SEE PROFILE IDEAS</a>
+                                  </td>
+                                </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- End Card Three -->
+
+            <!-- Card Four -->
+            <table role="presentation" class="card">
+              <tr>
+                <td class="wrapper">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="center">
+                        <h1>Questions?</h1>
+                        <p>Let us answer your questions about Google My Business.</p>
+                        <img src="https://www.perchapp.com//content/1-learn/38-promote-your-gift-certificates-on-your-social-pages/home.png"/>
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+                          <tbody>
+                          <tr>
+                            <td align="center">
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                <tr>
+                                  <td>
+                                    <a href="http://htmlemail.io" target="_blank">CONTACT US</a>
+                                  </td>
+                                </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                        <p>Cheers to customers choosing you!</p>
+                        <p>Madeline Evans</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- End Card Four -->
 
             <!-- START FOOTER -->
             <div class="footer">
               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <span class="apple-link">Company Inc, 3 Abbey Road, San Francisco CA 94102</span>
-                    <br> Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif">Unsubscribe</a>.
+                    <img src="https://www.perchapp.com//assets/images/thrivehive/logo.svg"/>
+                    <p>© 2019 ThriveHive. All Rights Reserved.</p>
                   </td>
                 </tr>
                 <tr>
-                  <td class="content-block powered-by">
-                    Powered by <a href="http://htmlemail.io">HTMLemail</a>.
+                  <div class="link"><a href="https://marketingguides.thrivehive.com">marketingguides.thrivehive.com</a></div>
+                  <div class="link"><a href="mailto:marketingguides@thrivehive.com">marketingguides@thrivehive.com</a></div>
+                  <div class="link"><a href="https://www.thrivehive.com">unsubscribe</a></div>
+                </tr>
+                <tr>
+                  <td class="content-block">
+                    <span class="apple-link">1550 Wynkoop St., Denver, CO 80202</span>
                   </td>
                 </tr>
               </table>
             </div>
             <!-- END FOOTER -->
 
-          <!-- END CENTERED WHITE CONTAINER -->
           </div>
         </td>
-        <td>&nbsp;</td>
       </tr>
     </table>
   </body>
