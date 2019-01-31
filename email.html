@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Simple Transactional Email</title>
+    <title>Feburary 2019 ThriveHive Guide</title>
     <style>
       /* -------------------------------------
           GLOBAL RESETS
@@ -19,9 +19,9 @@
 
       body {
         background-color: #f6f6f6;
-        font-family: sans-serif;
+        font-family: OpenSans,sans-serif;
         -webkit-font-smoothing: antialiased;
-        font-size: 14px;
+        font-size: 18px;
         line-height: 1.4;
         margin: 0;
         padding: 0;
@@ -45,7 +45,7 @@
       ------------------------------------- */
 
       .body {
-        background-color: #f6f6f6;
+        background-color: #eeeeee;
         width: 100%; 
       }
 
@@ -71,26 +71,36 @@
       .header {
         background: #ffffff;
         width: 100%;
-        box-shadow: 0 10px 5px -5px lightgray;
-        margin-bottom: 50px;
+        box-shadow: 0 3px 8px 0 #9b9b9b;
+        margin-bottom: 38px;
+      }
+
+      .header a {
+        font-size: 12px;
       }
 
       .card {
         background: #ffffff;
         width: 95%;
+        max-width: 703px;
         margin: 0 auto 20px auto;
         border-radius: 4px;
         text-align: center;
         box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
-
       }
       .card p {
-        width: 75%;
+        width: 365px;
+      }
+      .card h1, h2 {
+        padding-bottom: 30px;
+      }
+      .card img {
+        padding: 20px 0;
       }
 
       .wrapper {
         box-sizing: border-box;
-        padding: 20px; 
+        padding: 24px 20px;
       }
 
       .content-block {
@@ -100,9 +110,10 @@
 
       .footer {
         clear: both;
-        margin-top: 10px;
+        margin-top: 60px;
         text-align: center;
-        width: 100%; 
+        width: 100%;
+        color: #4a4a4a;
       }
       .footer td,
       .footer p,
@@ -113,6 +124,8 @@
       }
       .footer img {
         max-width: 200px;
+        padding: 0 10px;
+        margin-bottom: 20px;
       }
       .footer .link {
         display: inline;
@@ -120,6 +133,12 @@
       }
       .footer .link:first-child {
           border-right: black;
+      }
+      .footer .logo {
+        height: 25px;
+      }
+      .footer tr:nth-child(2) {
+        height: 75px;
       }
 
       /* -------------------------------------
@@ -129,25 +148,26 @@
       h2,
       h3,
       h4 {
-        color: #000000;
-        font-family: sans-serif;
-        font-weight: 400;
-        line-height: 1.4;
-        margin: 0 0 15px 0;
+        color: #212d5d;
+        font-family: OpenSans, sans-serif;
+        font-weight: 600;
+        margin: 0;
       }
-
       h1 {
-        font-size: 35px;
-        font-weight: 300;
-        text-align: center;
-        text-transform: capitalize; 
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      h3 {
+        font-size: 16px;
       }
 
       p,
       ul,
       ol {
-        font-family: sans-serif;
-        font-size: 14px;
+        font-family: OpenSans, sans-serif;
+        font-size: 18px;
         font-weight: normal;
         margin: 0 0 15px 0;
       }
@@ -159,7 +179,7 @@
       }
 
       a {
-        color: #5fb58a;
+        color: #37b886;
         text-decoration: none;
       }
 
@@ -183,14 +203,14 @@
       }
       .btn a {
         background-color: #ffffff;
-        border: solid 1px #5fb58a;
+        border: solid 1px #37b886;
         border-radius: 50px;
         box-sizing: border-box;
-        color: #5fb58a;
+        color: #37b886;
         cursor: pointer;
         display: inline-block;
         font-size: 14px;
-        font-weight: bold;
+        font-weight: normal;
         margin: 0;
         padding: 12px 55px;
         text-decoration: none;
@@ -198,12 +218,12 @@
       }
 
       .btn-primary table td {
-        background-color: #5fb58a;
+        background-color: #37b886;
       }
 
       .btn-primary a {
-        background-color: #5fb58a;
-        border-color: #5fb58a;
+        background-color: #37b886;
+        border-color: #37b886;
         color: #ffffff; 
       }
 
@@ -270,22 +290,7 @@
       ------------------------------------- */
       @media only screen and (max-width: 620px) {
         table[class=body] h1 {
-          font-size: 28px !important;
           margin-bottom: 10px !important;
-        }
-
-        table[class=body] p,
-        table[class=body] ul,
-        table[class=body] ol,
-        table[class=body] td,
-        table[class=body] span,
-        table[class=body] a {
-          font-size: 16px !important;
-        }
-
-        table[class=body] .wrapper,
-        table[class=body] .article {
-          padding: 10px !important;
         }
         table[class=body] .content {
           padding: 0 !important; 
@@ -294,24 +299,11 @@
           padding: 0 !important;
           width: 100% !important; 
         }
-        table[class=body] .card {
-          border-left-width: 0 !important;
-          border-radius: 0 !important;
-          border-right-width: 0 !important; 
-        }
-        table[class=body] .btn table {
-          width: 100% !important; 
-        }
-        table[class=body] .btn a {
-          width: 100% !important; 
-        }
-        table[class=body] .img-responsive {
-          height: auto !important;
-          max-width: 100% !important;
-          width: auto !important; 
-        }
         .footer .link {
-          display: block;
+          display: block !important;
+        }
+        .footer img {
+          padding: 0 5px !important;
         }
       }
 
@@ -357,7 +349,7 @@
             <div class="header">
               <table border="0" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td class="wrapper">Marketing Guide</td>
+                  <td class="wrapper"><h3>Marketing Guide</h3></td>
                   <td class="wrapper" align="right"><a href="mailto:support@thrivehive.com">Contact Us</a></td>
                 </tr>
               </table>
@@ -392,7 +384,7 @@
                       <td align="center">
                         <h1>Posting Ideas</h1>
                         <p>Copy our examples, tweak them for your business and download free images</p>
-                        <img src="https://www.perchapp.com//content/1-learn/38-promote-your-gift-certificates-on-your-social-pages/home.png"/>
+                        <img src="https://s3.amazonaws.com/images.production.closely/perch/guides/february-ideas-250.png"/>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                           <tr>
@@ -427,7 +419,7 @@
                       <td align="center">
                         <h1>Profile Ideas</h1>
                         <p>Keep your presence updated and remember to respond to reviews.</p>
-                        <img src="https://www.perchapp.com//content/1-learn/38-promote-your-gift-certificates-on-your-social-pages/home.png"/>
+                        <img src="https://s3.amazonaws.com/images.production.closely/perch/guides/review-250.png"/>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                           <tr>
@@ -462,7 +454,7 @@
                       <td align="center">
                         <h1>Questions?</h1>
                         <p>Let us answer your questions about Google My Business.</p>
-                        <img src="https://www.perchapp.com//content/1-learn/38-promote-your-gift-certificates-on-your-social-pages/home.png"/>
+                        <img src="https://s3.amazonaws.com/images.production.closely/perch/guides/junzi-250.png"/>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                           <tr>
@@ -495,14 +487,24 @@
               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <img src="https://www.perchapp.com//assets/images/thrivehive/logo.svg"/>
+                    <img src="https://s3.amazonaws.com/images.production.closely/perch/guides/logos/thrivehive.svg"/>
                     <p>© 2019 ThriveHive. All Rights Reserved.</p>
                   </td>
                 </tr>
                 <tr>
-                  <div class="link"><a href="https://marketingguides.thrivehive.com">marketingguides.thrivehive.com</a></div>
-                  <div class="link"><a href="mailto:marketingguides@thrivehive.com">marketingguides@thrivehive.com</a></div>
-                  <div class="link"><a href="https://www.thrivehive.com">unsubscribe</a></div>
+                  <td class="content-block">
+                    <div class="link"><a href="https://marketingguides.thrivehive.com">marketingguides.thrivehive.com</a></div>
+                    <div class="link"><a href="mailto:marketingguides@thrivehive.com">marketingguides@thrivehive.com</a></div>
+                    <div class="link"><a href="https://www.thrivehive.com">unsubscribe</a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content-block">
+                    <a href="https://www.facebook.com/thrivehive"><img class="logo" src="https://s3.amazonaws.com/images.production.closely/perch/guides/logos/facebook.svg"/></a>
+                    <a href="https://www.twitter.com/thrivehive"><img class="logo" src="https://s3.amazonaws.com/images.production.closely/perch/guides/logos/twitter.svg"/></a>
+                    <a href="https://www.instagram.com/thrivehive"><img class="logo" src="https://s3.amazonaws.com/images.production.closely/perch/guides/logos/instagram.svg"/></a>
+                    <a href="https://www.linkedin.com/thrivehive"><img class="logo" src="https://s3.amazonaws.com/images.production.closely/perch/guides/logos/linkedin.svg"/></a>
+                  </td>
                 </tr>
                 <tr>
                   <td class="content-block">
