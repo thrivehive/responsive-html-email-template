@@ -49,3 +49,5 @@ Install Juice:
 
 Run juice on HTML to inline styles:
 `juice email.html email-inlined.html`
+
+Note that images under 8K get inlined by default, so you have to use the `data-inline-ignore` attribute on the `img` tag (or figure out how to pass the right JSON command line args to the web resource processor)
